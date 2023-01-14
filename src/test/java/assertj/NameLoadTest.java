@@ -33,7 +33,7 @@ class NameLoadTest {
     @Test
     void checkNameOnEquals() {
         NameLoad nameLoad = new NameLoad();
-        String[] name = {"qrr=e" , "ff="};
+        String[] name = {"qrr=e", "ff="};
         assertThatThrownBy(() -> nameLoad.parse(name))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("contain a value");

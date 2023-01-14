@@ -38,5 +38,4 @@ class NameLoadTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("contain a value");
     }
-
 }

@@ -17,8 +17,26 @@ class NameLoadTest {
         NameLoad nameLoad = new NameLoad();
         String[] name = {};
         assertThatThrownBy(() -> nameLoad.parse(name))
-                .isInstanceOf(IllegalStateException.class)
+                .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("array is empty");
+    }
+
+    @Test
+    void checkNameNotEquals() {
+        NameLoad nameLoad = new NameLoad();
+        String[] name = {"fff"};
+        assertThatThrownBy(() -> nameLoad.parse(name))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("the symbol");
+    }
+
+    @Test
+    void checkNameOnEquals() {
+        NameLoad nameLoad = new NameLoad();
+        String[] name = {"qrr=e" , "ff="};
+        assertThatThrownBy(() -> nameLoad.parse(name))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("contain a value");
     }
 
 }

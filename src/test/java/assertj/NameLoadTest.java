@@ -15,8 +15,8 @@ class NameLoadTest {
     @Test
     void checkNameLength() {
         NameLoad nameLoad = new NameLoad();
-        String word = "";
-        assertThatThrownBy(() -> nameLoad.parse(word))
+        String[] name = {};
+        assertThatThrownBy(() -> nameLoad.parse(name))
                 .isInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("array is empty");
     }

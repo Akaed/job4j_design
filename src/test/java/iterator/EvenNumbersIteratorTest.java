@@ -67,5 +67,4 @@ class EvenNumbersIteratorTest {
         assertThat(it.hasNext()).isFalse();
         assertThat(it.hasNext()).isFalse();
     }
-
 }

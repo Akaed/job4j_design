@@ -97,5 +97,4 @@ class UserStoreTest {
         boolean rsl = store.delete("2");
         assertThat(rsl).isFalse();
     }
-
 }

@@ -64,5 +64,4 @@ class RoleStoreTest {
         Role result = store.findById("1");
         assertThat(result.getName()).isEqualTo("Mechanic");
     }
-
 }

@@ -225,4 +225,5 @@ class SimpleArrayListTest {
         list.set(0, 22);
         assertThat(iterator.next()).isEqualTo(22);
     }
+
 }

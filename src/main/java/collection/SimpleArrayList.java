@@ -2,7 +2,7 @@ package collection;
 
 import java.util.*;
 
-public class SimpleArrayList <T> implements SimpleList<T> {
+public class SimpleArrayList <T> implements SimpleList <T> {
     private T[] container;
     private int size;
     private int modCount;
@@ -74,4 +74,5 @@ public class SimpleArrayList <T> implements SimpleList<T> {
     private T[] grow() {
        return Arrays.copyOf(container, (container.length + 1) * 2);
     }
+
 }

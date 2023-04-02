@@ -2,12 +2,10 @@ package assertj;
 
 import org.assertj.core.data.Index;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 class SimpleConvertTest {
@@ -21,6 +19,7 @@ class SimpleConvertTest {
                 .containsAnyOf("zero", "second", "six")
                 .doesNotContain("first", Index.atIndex(1));
     }
+
     @Test
     void checkList() {
         SimpleConvert simpleConvert = new SimpleConvert();
@@ -28,6 +27,7 @@ class SimpleConvertTest {
         assertThat(array).isInstanceOf(List.class)
                 .contains("first");
     }
+
     @Test
     void checkSet() {
         SimpleConvert simpleConvert = new SimpleConvert();
@@ -36,6 +36,7 @@ class SimpleConvertTest {
                 .hasSize(5)
                 .containsAnyOf("zero", "second", "six");
     }
+
     @Test
     void checkMap() {
         SimpleConvert simpleConvert = new SimpleConvert();

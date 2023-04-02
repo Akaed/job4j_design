@@ -12,6 +12,7 @@ class BoxTest {
         String name = box.whatsThis();
         assertThat(name).isEqualTo("Sphere");
     }
+
     @Test
     void isThisUnknown() {
         Box box = new Box(2, 4);
@@ -46,7 +47,6 @@ class BoxTest {
         boolean rsl = box.isExist();
         assertThat(rsl).isFalse();
     }
-
 
     @Test
     void whenAreaIsCube() {

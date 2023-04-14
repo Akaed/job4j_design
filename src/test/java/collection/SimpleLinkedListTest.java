@@ -88,4 +88,5 @@ class SimpleLinkedListTest {
         assertThat(second.next()).isEqualTo(2);
         assertThat(second.hasNext()).isFalse();
     }
+
 }

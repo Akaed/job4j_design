@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 
-public class SimpleLinkedList<E> implements LinkedList<E> {
+public class SimpleLinkedList <E> implements LinkedList<E> {
     private int size = 0;
     private int modCount = 0;
     private Node<E> head;

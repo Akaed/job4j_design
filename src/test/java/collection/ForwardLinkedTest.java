@@ -8,10 +8,10 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-
 class ForwardLinkedTest {
     private ForwardLinked<Integer> list;
     @BeforeEach
+
     public void initData() {
     list = new ForwardLinked<>();
         list.add(1);

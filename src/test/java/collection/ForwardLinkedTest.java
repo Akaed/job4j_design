@@ -10,8 +10,8 @@ import java.util.NoSuchElementException;
 
 class ForwardLinkedTest {
     private ForwardLinked<Integer> list;
-    @BeforeEach
 
+    @BeforeEach
     public void initData() {
     list = new ForwardLinked<>();
         list.add(1);

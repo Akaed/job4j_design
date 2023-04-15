@@ -82,5 +82,4 @@ public class ForwardLinked<E> implements LinkedList<E> {
             this.next = next;
         }
     }
-
 }

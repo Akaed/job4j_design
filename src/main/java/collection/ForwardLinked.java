@@ -44,6 +44,8 @@ public class ForwardLinked<E> implements LinkedList<E> {
         head.item = null;
         head.next = null;
         head = newHead;
+        size--;
+        modCount++;
         return rsl;
     }
 

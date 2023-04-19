@@ -6,7 +6,7 @@ public class SimpleStack<T> {
     private Node<T> head;
 
     public T pop() {
-        if ( head == null) {
+        if (head == null) {
             throw new NoSuchElementException();
         }
         T value = head.item;

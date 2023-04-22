@@ -25,6 +25,12 @@ public class ForwardLinked<E> implements LinkedList<E> {
         modCount++;
     }
 
+    public void addFirst(E value) {
+        head = new Node<>(value, head);
+        size++;
+        modCount++;
+    }
+
     @Override
     public E get(int index) {
         Objects.checkIndex(index, size);

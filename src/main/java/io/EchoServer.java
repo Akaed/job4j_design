@@ -17,6 +17,15 @@ public class EchoServer {
                         if (str.contains("Bye")) {
                             server.close();
                         }
+                        if (str.contains("Hello")) {
+                            out.write("Hello".getBytes());
+                        }
+                        if (str.contains("Exit")) {
+                            server.close();
+                        }
+                        if (str.contains("Any")) {
+                            out.write("What".getBytes());
+                        }
                     out.flush();
                 }
             }

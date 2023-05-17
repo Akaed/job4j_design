@@ -9,7 +9,7 @@ import java.util.Objects;
 public class SimpleSet<T> implements Set<T> {
     private static final Object PRESENT = new Object();
     private SimpleArrayList<T> set = new SimpleArrayList<>(0);
-    private HashMap<T,T> map = new HashMap();
+    private HashMap<T, T> map = new HashMap();
 
     @Override
     public boolean add(T value) {

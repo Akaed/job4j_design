@@ -2,23 +2,32 @@ package set;
 
 import collection.SimpleArrayList;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Objects;
 
 public class SimpleSet<T> implements Set<T> {
-    private static final Object PRESENT = new Object();
     private SimpleArrayList<T> set = new SimpleArrayList<>(0);
-    private HashMap<T, T> map = new HashMap();
 
     @Override
     public boolean add(T value) {
-        return map.put(value, (T) PRESENT) == null;
+        boolean count = false;
+        if (!contains(value)) {
+            set.add(value);
+            count = true;
+        }
+        return count;
     }
 
     @Override
     public boolean contains(T value) {
-        return Objects.equals(set.iterator(), value);
+        boolean count = false;
+        for (T element : set) {
+            if(Objects.equals(element, value)) {
+                count = true;
+                break;
+            }
+        }
+        return count;
     }
 
     @Override
